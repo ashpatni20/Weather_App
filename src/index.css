@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    height: 85vh;
+  }
+}
+
+.left-container, .right-container {
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.left-container {
+  background-color: #f0f0f0;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.right-container {
+  background-color: #ffffff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .left-container {
+    width: 30%;
+    border-right: 2px solid #ddd;
+  }
+  .right-container {
+    width: 70%;
+  }
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #4472C4;
+  color: #fff;
+  border-bottom: 4px solid #005bb5;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.left-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.left-container th {
+  background-color: #4472C4;
+  color: white;
+  text-align: left;
+  padding: 10px;
+}
+
+.left-container td {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.highlight {
+  background-color: yellow;
+}
+
+.Search-input {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.Search-input input[type="search"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+}
+
+.Search-input button {
+  padding: 10px 15px;
+  background-color: #4472C4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-data {
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #4472C4;
+  color: white;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+button {
+  padding: 12px 10px;
+  background-color: #4472C4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.get-weather-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #4472C4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  margin-bottom: 5px;
+}
+
+.get-weather-button:hover {
+  background-color: #005bb5;
+}
+
+@media (max-width: 600px) {
+  .header h2 {
+    font-size: 20px;
+  }
+  
+  .Search-input {
+    flex-direction: column;
+  }
+  
+  .Search-input input[type="search"],
+  .Search-input button {
+    width: 100%;
+  }
+  
+  th, td {
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  .container {
+    height: auto;
+  }
+  
+  .left-container, .right-container {
+    width: 100%;
+    box-shadow: none;
+  }
+  
+  .right-container table th, .right-container table td {
+    display: block;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+  }
+}
+
+.noData {
+  font-size: larger;
+  font-weight: bold;
+  text-align: center;
+}
